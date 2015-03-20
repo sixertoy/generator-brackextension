@@ -1,5 +1,5 @@
 /*jslint nomen: true, indent: 4, plusplus: true */
-/*global define, console, brackets, _, $, Mustache, window, document */
+/*global define, brackets, $, Mustache */
 define(function (require, exports, module) {
 
     'use strict';
@@ -8,15 +8,16 @@ define(function (require, exports, module) {
     Modules
 
 */
-    var _ = brackets.getModule('thirdparty/lodash'),
-        Menus = brackets.getModule('command/Menus'),
+    var Menus = brackets.getModule('command/Menus'),
         AppInit = brackets.getModule('utils/AppInit'),
         Resizer = brackets.getModule('utils/Resizer'),
         Commands = brackets.getModule('command/Commands'),
         ExtensionUtils = brackets.getModule('utils/ExtensionUtils'),
+        MainViewManager = brackets.getModule('view/MainViewManager'),
         CommandManager = brackets.getModule('command/CommandManager'),
         WorkspaceManager = brackets.getModule('view/WorkspaceManager'),
         PreferencesManager = brackets.getModule('preferences/PreferencesManager'),
+        // _ = brackets.getModule('thirdparty/lodash'),
         /** ------------------------------------
 
     Globals
@@ -47,7 +48,7 @@ define(function (require, exports, module) {
         $appButton, // right toolbar button
         $panelContainer, // bottom panel main view
         extensionPrefs = PreferencesManager.getExtensionPrefs(PREFIX + '.' + EXTENSION_ID);
-        /** ------------------------------------
+    /** ------------------------------------
 
     UI Variables
 
@@ -59,7 +60,27 @@ define(function (require, exports, module) {
     Private Functions
 
 */
-    function _handlerPanelVisibility(){
+    function _handlerPanelVisibility() {
+        Resizer.toggle($appPanel);
+        $appButton.toggleClass('active');
+        var opened = $appButton.hasClass('active');
+        extensionPrefs.set('opened', opened);
+        CommandManager.get(SHOWPANEL_COMMAND_ID).setChecked(opened);
+        if (!opened) {
+            MainViewManager.focusActivePane();
+        }
+    }
+
+    function _setPreferences(){
+
+        // si la valeur
+        // n'est pas definie a l'installation
+        /*
+        if (!extensionPrefs.get('opened')) {
+            extensionPrefs.set('opened', false);
+        }
+        */
+
     }
 
     /** ------------------------------------
@@ -85,26 +106,23 @@ define(function (require, exports, module) {
 
     // before AppInit.appReady
     AppInit.htmlReady(function () {
-
-        var minHeight = 100;
+        var minHeight = 100,
+            base = '#<%= project.name %>-panel .toolbar';
         WorkspaceManager.createBottomPanel(EXTENSION_ID + '.panel', $(Mustache.render(PanelHTML, ExtensionStrings)), minHeight);
         $appPanel = $('#<%= project.name %>-panel');
         $panelContainer = $($appPanel.find('.table-container').first());
-
-        var base = '#<%= project.name %>-panel .toolbar';
+        $('#main-toolbar .buttons').append(Mustache.render(ButtonHTML, ExtensionStrings));
+        //
         $(base + ' .close').on('click', _handlerPanelVisibility);
         $(base + ' .title').on('click', _handlerPanelVisibility);
-        $('#main-toolbar .buttons').append(Mustache.render(ButtonHTML, ExtensionStrings));
         $appButton = $('#<%= project.name %>-button').on('click', _handlerPanelVisibility);
-
     });
 
     // After AppInit.htmlReady
     AppInit.appReady(function () {
-
         __registerCommands();
         __registerWindowsMenu();
-
+        _setPreferences();
     });
 
 });
