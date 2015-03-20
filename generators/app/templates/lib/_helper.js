@@ -58,6 +58,6 @@ define(function (require, exports, module) {
     Helper.prototype.onAppReady = function () {};
 
     // exports class
-    exports.Helper = Helper;
+    module.exports = Helper;
 
 });
