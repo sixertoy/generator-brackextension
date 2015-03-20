@@ -10,6 +10,8 @@ root:
       - [_button.html, _panel.html]
       - css:
         - [styles.css]
+      - img:
+        - [icon_nounproject.svg]
     - lib:
       - [_helper.js]
     - nls:
