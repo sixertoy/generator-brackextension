@@ -1,5 +1,5 @@
 /*jslint indent: 4, nomen: true */
-/*global require, exports, module */
+/*global exports */
 (function () {
 
     'use strict';

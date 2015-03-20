@@ -1,18 +1,36 @@
 @import '_.less';
 
+@icon: '../img/icon_nounproject.svg';
+
 .clearfix{
     .clearfixed();
 }
 
-#<%= project.name %>{
+#<%= project.name %>-panel {
     .toolbar{
         .title{
+            line-height: 24px;
+            padding-left: 30px;
+            background: url(@icon) no-repeat left top transparent;
         }
         .actions{
         }
     }
     .table-container{
         .box{
+            box-sizing: border-box;
+            margin:0;
+            width: 100%;
+            display: block;
         }
     }
 }
+
+#<%= project.name %>-button {
+    position: relative;
+    background: url(@icon) no-repeat center top transparent;
+    &.active{
+        background-position: center bottom;
+    }
+}
+

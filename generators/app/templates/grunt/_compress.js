@@ -7,7 +7,7 @@ module.exports = function (grunt, options) {
                 archive: 'build/Releases/<%= author.name %>.<%= project.name %>_<%= ldim %> package.files <%= rdim %>.zip'
             },
             files: [{
-                src: '<%= ldim %> package.files <%= rdim %>',
+                src: ['<%= ldim %> package.files <%= rdim %>'],
                 dest: '<%= author.name %>.<%= project.name %>/'
             }]
         }

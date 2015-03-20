@@ -22,12 +22,14 @@ define(function (require, exports, module) {
          */
         __privateMethods = {
 
-            _domainMethod: function (url, current, root) {
+            _domainMethod: function () {
                 var domainVariable = '';
                 simpleDomain.exec('method_to_call', domainVariable).done(function (domainResult) {
+                    domainResult = null;
                     // node domain result
                 }).fail(function (err) {
                     // node domain result fail
+                    err = null;
                 });
             },
 

@@ -1,0 +1,24 @@
+/** -----------------------------------------------------
+ *
+ * Functions
+ *
+ */
+/* alias */
+.clearfix {
+  /* <IE7> */
+  *zoom: 1;
+  /* <IE7> */
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+.clearfix:before {
+  clear: both;
+}
