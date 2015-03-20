@@ -9,6 +9,7 @@ root:
     - htmlContent:
       - [_button.html, _panel.html]
       - css:
+        - [styles.css]
     - lib:
       - [_helper.js]
     - nls:

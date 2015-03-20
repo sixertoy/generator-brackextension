@@ -1,6 +1,6 @@
 /*jslint indent: 4, nomen: true */
-/*global define */
-define(function (require, exports, module) {
+/*global require, exports, module */
+(function () {
 
     'use strict';
 
@@ -35,4 +35,4 @@ define(function (require, exports, module) {
 
     exports.init = init;
 
-});
+}());
