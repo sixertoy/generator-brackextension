@@ -24,6 +24,7 @@
         lodash = require('lodash'),
         slugify = require('slugify'),
         AppBones = require('appbones'),
+        pkg = require('../../package.json'),
         generators = require('yeoman-generator');
 
     ProjectGenerator = generators.Base.extend({
@@ -39,11 +40,12 @@
         },
 
         initializing: function () {
+
             // custom templates delimiter
             this.config.set('rdim', '%>');
             this.config.set('ldim', '<%=');
             if (!this.options['skip-install']) {
-                this.log(yosay('Hello sir, welcome to the awesome Adobe Brackets extension generator!'));
+                this.log(yosay('Hello sir, welcome to the awesome Adobe Brackets extension generator v' + pkg.version));
             }
 
         },
@@ -82,7 +84,7 @@
                     type: 'input',
                     name: 'projectdescription',
                     message: 'Project description',
-                    default: 'Place your project\'s description here'
+                    default: ('Generated with Yeoman generator-brackextension v' + pkg.version)
                 });
 
                 prompts.push({

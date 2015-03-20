@@ -1,6 +1,7 @@
 /*jslint indent: 4 */
 /*global module */
 module.exports = function (grunt, options) {
+    'use strict';
     return {
         options: {
             files: ['package.json'],
