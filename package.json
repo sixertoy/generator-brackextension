@@ -1,6 +1,6 @@
 {
   "name": "generator-brackextension",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Yeoman Generator for an Adobe Brackets Extension",
   "main": "generatores/app/index.js",
   "scripts": {
