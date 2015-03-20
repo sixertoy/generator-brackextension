@@ -1,0 +1,54 @@
+/** -----------------------------------------------------
+ *
+ * Functions
+ *
+ */
+
+.clearfixed() {
+    &:after {
+        content: ".";
+        display: block;
+        overflow: hidden;
+        visibility: hidden;
+        font-size: 0;
+        line-height: 0;
+        width: 0;
+        height: 0;
+    }
+    &:before {
+        clear: both;
+    }
+    /* <IE7> */
+    *zoom: 1;
+    /* <IE7> */
+}
+
+.hidden() {
+    width: 0;
+    margin: 0;
+    height: 0;
+    padding: 0;
+    outline: none;
+    display: none;
+    line-height: 0;
+    overflow: hidden;
+    user-select: none;
+    letter-spacing: 0;
+    visibility: hidden;
+    .no-select();
+}
+
+.float(@direction:left){
+    float:@direction;
+    width: auto;
+    display: block;
+}
+
+/* alias */
+.floating(@direction:left){
+    .float(@direction);
+}
+
+.no-select(){
+    user-select: none;
+}

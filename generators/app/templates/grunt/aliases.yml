@@ -1,0 +1,17 @@
+tests:
+  - jshint
+build:
+  - tests
+  - less
+  - autoprefixer
+  - compress
+package:
+  - tests
+  - less
+  - autoprefixer
+  - bump
+  - compress
+default:
+  - tests
+  - build
+  - watch

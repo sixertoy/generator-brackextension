@@ -1,0 +1,22 @@
+---
+# project folders
+root:
+    - [_.editorconfig, _.gitattributes, _.gitignore, _.jshintrc, _Gruntfile.js, _LICENSE-MIT, _main.js, _package.json, _README.md, CHANGELOG.md, strings.js]
+    - build:
+      - Releases:
+    - grunt:
+        - [_compress.js, aliases.yml, autoprefixer.js, bump.js, jshint.js, less.js, watch.js]
+      - htmlContent:
+        - [_panel.html]
+        - css:
+    - lib:
+    - nls:
+      - [strings.js]
+      - root:
+        - [_strings.js]
+    - node:
+      - [_simpleDomain.js]
+      - lib:
+      - src:
+        - less:
+          [__.less, _styles.less]
