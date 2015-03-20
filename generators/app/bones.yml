@@ -16,7 +16,7 @@ root:
       - root:
         - [_strings.js]
     - node:
-      - [_simpleDomain.js]
+      - [_simple-domain.js]
       - lib:
     - src:
       - less:
