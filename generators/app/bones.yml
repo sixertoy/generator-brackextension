@@ -8,7 +8,7 @@ root:
         - [_compress.js, aliases.yml, autoprefixer.js, bump.js, jshint.js, less.js, watch.js]
     - htmlContent:
       - css:
-        - [_panel.html]
+        - [_button.html, _panel.html]
     - lib:
     - nls:
       - [strings.js]
