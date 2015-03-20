@@ -43,7 +43,7 @@
             this.config.set('rdim', '%>');
             this.config.set('ldim', '<%=');
             if (!this.options['skip-install']) {
-                this.log(yosay('Hello sir, welcome to the awesome barckets extension generator!'));
+                this.log(yosay('Hello sir, welcome to the awesome Adobe Brackets extension generator!'));
             }
 
         },
@@ -116,12 +116,13 @@
 
         writing: function () {
             var $this = this,
+                lodashOpts = {},
                 done = this.async(),
                 data = this.config.getAll(),
                 bones = path.resolve(this.templatePath(), '../bones.yml'),
                 appbones = new AppBones(this.templatePath(), this.destinationPath());
             Q.delay((function () {
-                appbones.build(bones, data);
+                appbones.build(bones, data, lodashOpts);
             }()), 1500).then((function () {
                 done();
             }()));

@@ -4,10 +4,10 @@ module.exports = function (grunt, options) {
     return {
         main: {
             options: {
-                archive: 'build/Releases/<%= author.name %>.<%= project.name %>_<%= package.version %>.zip'
+                archive: 'build/Releases/<%= author.name %>.<%= project.name %>_<%= ldim %> package.files <%= rdim %>.zip'
             },
             files: [{
-                src: '<%= package.files %>',
+                src: '<%= ldim %> package.files <%= rdim %>',
                 dest: '<%= author.name %>.<%= project.name %>/'
             }]
         }
