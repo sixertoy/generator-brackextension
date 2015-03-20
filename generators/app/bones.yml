@@ -7,8 +7,8 @@ root:
     - grunt:
         - [_compress.js, aliases.yml, autoprefixer.js, bump.js, jshint.js, less.js, watch.js]
     - htmlContent:
-      - css:
         - [_button.html, _panel.html]
+      - css:
     - lib:
       - [_helper.js]
     - nls:
