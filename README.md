@@ -1,6 +1,4 @@
-# Brackets Extension Generator [![Built with Grunt][grunt-img]](http://gruntjs.com/)
-
-[![MIT License][license-img]][license-url]
+# Brackets Extension Generator [![Built with Grunt][grunt-img]](http://gruntjs.com/) [![MIT License][license-img]][license-url] [![NPM version][npm-version-img]][npm-url] [![NPM downloads][npm-downloads-img]][npm-url]
 
 > A Simple Brackets Extension Generator
 
@@ -58,3 +56,7 @@ root:
 
 [license-img]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
 [license-url]: LICENSE-MIT
+
+[npm-url]: https://npmjs.org/package/generator-brackextension
+[npm-version-img]: http://img.shields.io/npm/v/generator-brackextension.svg?style=flat-square
+[npm-downloads-img]: http://img.shields.io/npm/dm/generator-brackextension.svg?style=flat-square
