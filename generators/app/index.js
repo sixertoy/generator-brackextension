@@ -44,6 +44,7 @@
             // custom templates delimiter
             this.config.set('rdim', '%>');
             this.config.set('ldim', '<%=');
+
             if (!this.options['skip-install']) {
                 this.log(yosay('Hello sir, welcome to the awesome Adobe Brackets extension generator v' + pkg.version));
             }
@@ -137,7 +138,9 @@
         },
 
         end: function () {
-
+            if (!this.options['skip-install']) {
+                this.spawnCommand('grunt', ['build']);
+            }
         }
 
     });
