@@ -5,5 +5,5 @@ define({
     // Brackets Menus
     'SHOW_PANEL': 'Show <%= project.name %>',
     // Templates HTML Content
-    'TITLE_PANEL': 'Show <%= project.name %>'
+    'TITLE_PANEL': '<%= project.name %>'
 });
