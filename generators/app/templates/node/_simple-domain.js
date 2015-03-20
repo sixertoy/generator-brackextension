@@ -6,7 +6,7 @@ define(function (require, exports) {
     'use strict';
 
     var DOMAIN_IS_ASYNC = false,
-        DOMAIN_NAME = 'simpleDomain',
+        DOMAIN_NAME = 'simple-domain',
         DOMAIN_DESCRIPTION = 'Simple Domain Description',
         DOMAIN_PARAMS = [{
             name: 'paramName',

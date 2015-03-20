@@ -31,6 +31,7 @@ define(function (require, exports, module) {
     Requires
 
 */
+        Helper = require('./lib/helper'),
         ExtensionStrings = require('strings'),
         /** ------------------------------------
 
@@ -120,9 +121,15 @@ define(function (require, exports, module) {
 
     // After AppInit.htmlReady
     AppInit.appReady(function () {
+
         __registerCommands();
         __registerWindowsMenu();
+
         _setPreferences();
+
+        var helper = new Helper();
+        helper.onAppReady();
+
     });
 
 });

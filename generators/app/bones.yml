@@ -10,6 +10,7 @@ root:
       - css:
         - [_button.html, _panel.html]
     - lib:
+      - [_helper.js]
     - nls:
       - [strings.js]
       - root:
