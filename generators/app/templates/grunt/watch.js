@@ -2,7 +2,7 @@
 /*global module */
 module.exports = {
     less: {
-        files: ['src/**/*', '!src/**/*.css'],
+        files: ['src/*.less', '!src/*.css'],
         tasks: ['less', 'autoprefixer']
     }
 };

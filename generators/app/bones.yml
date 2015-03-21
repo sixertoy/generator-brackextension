@@ -22,5 +22,4 @@ root:
       - [_simple-domain.js]
       - lib:
     - src:
-      - less:
-        - [__.less, _styles.less]
+      - [__.less, _styles.less]
