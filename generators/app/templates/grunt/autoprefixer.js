@@ -8,7 +8,7 @@ module.exports = function (grunt, options) {
             browsers: ['last 2 versions']
         },
         compile: {
-            src: 'src/styles.css',
+            src: 'htmlContent/css/styles.css',
             dest: 'htmlContent/css/styles.css'
         }
     };

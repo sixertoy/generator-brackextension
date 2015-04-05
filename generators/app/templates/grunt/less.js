@@ -3,7 +3,7 @@
 module.exports = {
     compile: {
         files: {
-            "src/styles.css": "src/styles.less"
+            "htmlContent/css/styles.css": "src/styles.less"
         }
     }
 };
