@@ -52,6 +52,11 @@ root:
         - [__.less, _styles.less]
 ```
 
+# History
+
+v0.1.15 - Added node/package.json for npm flatten-packages lib
+v0.1.14 - Update grunt-autoprefixer task
+
 [grunt-img]: https://cdn.gruntjs.com/builtwith.png
 
 [license-img]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
