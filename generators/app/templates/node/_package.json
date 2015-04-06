@@ -1,0 +1,12 @@
+{
+    "name": "node",
+    "version": "1.0.0",
+    "description": "",
+    "main": "simple-domain.js",
+    "author": {
+        "name": "<%= author.name %>",
+        "email": "<%= author.email %>"
+    },
+    "license": "MIT",
+    "dependencies": {}
+}

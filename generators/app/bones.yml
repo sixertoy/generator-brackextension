@@ -19,7 +19,7 @@ root:
       - root:
         - [_strings.js]
     - node:
-      - [_simple-domain.js]
+      - [_simple-domain.js, _package.json]
       - lib:
     - src:
       - [__.less, _styles.less]
